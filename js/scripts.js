@@ -38,13 +38,14 @@ $(document).ready(function() {
 
 
     $(".country").last().click(function() {
-      alert("clicked");
+
       $("#show-country").show();
       $("#show-country h2").text(newPlace.newCountry);
+
       $(".country-display").text(newPlace.newCountry);
 
 
-      newPlaces.cities.forEach(function(city) {
+      newPlace.cities.forEach(function(city) {
         $("ul#city-stuff").append("<li>" + city.city + ", " + city.landmark + ", " + city.team + "</li>");
       });
     });
